@@ -1,0 +1,10 @@
+{
+"App": 
+  {
+    "mode": "in-memory",
+    "clusterSize": 1,
+    "host": "nixtop",
+    "balancer": "round-robin",
+    "loggerConfiguration": "App.logger"
+  }
+}

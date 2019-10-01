@@ -1,0 +1,76 @@
+version: "2"
+services:
+   cassandra0:
+    image: cassandra
+    container_name: cassandra0
+    ports:
+     - 9042:9042
+     - 7199:7199
+
+###############################
+   cassandra1:
+    image: cassandra
+    container_name: cassandra1
+    ports:
+     - 9142:9042
+    links:
+     - cassandra0:seed
+    environment:
+     - CASSANDRA_SEEDS=seed
+
+###############################
+   cassandra2:
+    image: cassandra
+    container_name: cassandra2
+    ports:
+     - 9242:9042
+    links:
+     - cassandra0:seed
+    environment:
+     - CASSANDRA_SEEDS=seed
+###############################
+
+
+   database:
+    image: 'bitnami/mongodb:3.6'
+    labels:
+       kompose.service.type: nodeport
+    ports:
+       - "27017:27017"
+    volumes:
+       - 'mongodb_data:/bitnami'
+    expose:
+       - "27017"
+
+###############################
+
+
+   application:
+    image: "node:10.15.2-alpine"
+    user: "node"
+    working_dir: /home/node/app
+    depends_on:
+      - database
+      - cassandra0
+    environment:
+      - NODE_ENV=master
+    volumes:
+      - ../:/home/node/app
+    expose:
+      - "6000"
+    ports:
+      - "6000:3000"
+    links:
+      - database
+      - cassandra0
+    command: >
+      /bin/sh -c "
+        sleep 5;
+        npm run master;
+      "
+
+volumes:
+  mongodb_data:
+    driver: local
+
+

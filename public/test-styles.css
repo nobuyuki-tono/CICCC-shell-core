@@ -1,0 +1,118 @@
+/* Paragraph */
+#p-default {
+  background-color: fff;
+}
+#p-normal {
+  background: fff;
+}
+#p-info {
+  background-color: skyblue;
+}
+#p-warning {
+  background: orange;
+}
+#p-primary {
+  background: rgb(36, 36, 187);
+}
+#p-secondary {
+  background: rgb(5, 179, 5);
+}
+#p-thirdary {
+  background: gray;
+}
+/* Heading */
+#h-default {
+  background-color: fff;
+}
+#h-normal {
+  background: fff;
+}
+#h-info {
+  background-color: skyblue;
+}
+#h-warning {
+  background: orange;
+}
+#h-primary {
+  background: rgb(36, 36, 187);
+}
+#h-secondary {
+  background: rgb(5, 179, 5);
+}
+#h-thirdary {
+  background: gray;
+}
+/* Button */
+#btn-default {
+  background-color: fff;
+}
+#btn-normal {
+  background: fff;
+}
+#btn-info {
+  background-color: skyblue;
+}
+#btn-warning {
+  background: orange;
+}
+#btn-primary {
+  background: rgb(36, 36, 187);
+}
+#btn-secondary {
+  background: rgb(5, 179, 5);
+}
+#btn-thirdary {
+  background: gray;
+}
+/* Input */
+#input-default {
+  background-color: fff;
+}
+#input-normal {
+  background: fff;
+}
+#input-info {
+  background-color: skyblue;
+}
+#input-warning {
+  background: orange;
+}
+#input-primary {
+  background: rgb(36, 36, 187);
+}
+#input-secondary {
+  background: rgb(5, 179, 5);
+}
+#input-thirdary {
+  background: gray;
+}
+/* List */
+#list-default {
+  background-color: fff;
+}
+#list-normal {
+  background: fff;
+}
+#list-info {
+  background-color: skyblue;
+}
+#list-warning {
+  background: orange;
+}
+#list-primary {
+  background: rgb(36, 36, 187);
+}
+#list-secondary {
+  background: rgb(5, 179, 5);
+}
+#list-thirdary {
+  background: gray;
+}
+
+:root {
+  --primary-color: skyblue;
+}
+
+#p-test {
+  background: var(--primary-color);
+}

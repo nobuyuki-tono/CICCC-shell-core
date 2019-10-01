@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    clearConsole();
+    console.group("HTML Section");
+    startTimer("pageload-html");
+
+    class DebugInfo {
+      constructor() {
+        this.htmlTime = 0;
+        this.headTime = 0;
+        this.bodyTime = 0;
+        this.footerTime = 0;
+      }
+    }
+
+    let debugInfo = new DebugInfo();
+
+    function clearConsole() {
+      console.clear();
+    }
+
+    function startTimer(group) {
+      return console.time(group);
+    }
+
+    function endTimer(group) {
+      return console.timeEnd(group);
+    }
+  </script>
+  <head>
+    <script>
+      console.group("HEAD SECTION");
+      startTimer("pageload-head");
+    </script>
+
+    <title>My Website Logout</title>
+    <base href="" target="_blank" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <noscript>
+      JavaScript is not supported or is disabled in browser!
+    </noscript>
+    <script>
+      console.log("JavaScript is supported!");
+    </script>
+    ​
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML,CSS,JavaScript,Node.js" />
+    <meta name="description" content="" />
+    <meta name="author" content="Nobuyuki Tono" />
+    <meta name="generator" content="Visual Studio Code" />
+    <meta name="application-name" content="Netflix Clone" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      debugInfo.headTime = endTimer("pageload-head");
+      console.groupEnd("HEAD Section");
+    </script>
+  </head>
+  <body>
+    <script>
+      console.group("BODY Section");
+      startTimer("pageload-body");
+    </script>
+
+    <header>
+      <script>
+        console.group("Header Section");
+        startTimer("pageload-header");
+      </script>
+      <h1>Hello This is Logout Page</h1>
+      <script>
+        debugInfo.headTime = endTimer("pageload-header");
+        console.groupEnd("Header Section");
+      </script>
+    </header>
+    <nav>
+      <script>
+        console.group("NAV Section");
+        startTimer("pageload-nav");
+      </script>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="landing.html">Landing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="logout.html">Logout</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="social-login.html">Social-login</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="delete-account.html">Delete-account</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="construction.html">Construction</a></li>
+        <li><a href="common.html">Common</a></li>
+      </ul>
+      <script>
+        debugInfo.headTime = endTimer("pageload-nav");
+        console.groupEnd("NAV Section");
+      </script>
+    </nav>
+
+    <aside>
+      <script>
+        console.group("ASIDE Section");
+        startTimer("pageload-aside");
+      </script>
+
+      <H2>This is "aside " area</H2>
+
+      <script>
+        debugInfo.headTime = endTimer("pageload-aside");
+        console.groupEnd("ASIDE Section");
+      </script>
+    </aside>
+
+    <section>
+      <script>
+        console.group("SECTION Section");
+        startTimer("pageload-section");
+      </script>
+
+      <h2>This is "Section" area</h2>
+
+      <script>
+        debugInfo.headTime = endTimer("pageload-section");
+        console.groupEnd("SECTION Section");
+      </script>
+    </section>
+    <article>
+      <script>
+        console.group("ARTICLE Section");
+        startTimer("pageload-article");
+      </script>
+      <h2>This is "Article" area</h2>
+      <script>
+        debugInfo.headTime = endTimer("pageload-article");
+        console.groupEnd("ARTICLE Section");
+      </script>
+    </article>
+    <footer>
+      <script>
+        console.group("FOOTER SECTION");
+        startTimer("pageload-footer");
+      </script>
+
+      <h2>This is "Footer" area</h2>
+
+      <script>
+        debugInfo.footerTime = endTimer("pageload-footer");
+        console.groupEnd("FOOTER Section");
+      </script>
+    </footer>
+
+    <script>
+      debugInfo.bodyTime = endTimer("pageload-body");
+      console.groupEnd("BODY Section");
+    </script>
+    ​
+  </body>
+
+  <script>
+    debugInfo.htmlTime = endTimer("pageload-html");
+    console.groupEnd("HTML Section");
+  </script>
+</html>

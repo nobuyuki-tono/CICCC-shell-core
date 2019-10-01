@@ -1,0 +1,17 @@
+{
+"App": 
+  {
+    "mode": "in-memory",
+    "clusterSize": 1,
+    "host": "devNode.wsad.io",
+    "balancer": "round-robin"
+  },
+"OraActor":
+	{
+	"mode": "in-memory"
+	},
+"SynapticActor":
+	{
+	"mode": "in-memory"
+	}
+}

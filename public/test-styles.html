@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    clearConsole();
+    console.group("HTML Section");
+    startTimer("pageload-html");
+
+    class DebugInfo {
+      constructor() {
+        this.htmlTime = 0;
+        this.headTime = 0;
+        this.bodyTime = 0;
+        this.footerTime = 0;
+      }
+    }
+
+    let debugInfo = new DebugInfo();
+
+    function clearConsole() {
+      console.clear();
+    }
+
+    function startTimer(group) {
+      return console.time(group);
+    }
+
+    function endTimer(group) {
+      return console.timeEnd(group);
+    }
+  </script>
+  <head>
+    <script>
+      console.group("HEAD SECTION");
+      startTimer("pageload-head");
+    </script>
+
+    <title>CSS-TEST</title>
+    <base href="" target="_blank" />
+    <link rel="stylesheet" type="text/css" href="test-styles.css" />
+    <noscript>
+      JavaScript is not supported or is disabled in browser!
+    </noscript>
+    <script>
+      console.log("JavaScript is supported!");
+    </script>
+    ​
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="description" content="" />
+    <meta name="author" content="Nobuyuki Tono" />
+    <meta name="generator" content="Visual Studio Code" />
+    <meta name="application-name" content="Netflix Clone" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      debugInfo.headTime = endTimer("pageload-head");
+      console.groupEnd("HEAD Section");
+    </script>
+  </head>
+  <body>
+    <script>
+      console.group("BODY Section");
+      startTimer("pageload-body");
+    </script>
+
+    <header>
+      <script>
+        console.group("Header Section");
+        startTimer("pageload-header");
+      </script>
+      <h1 id="h-default">Hello This is CSS TEST</h1>
+      <h2 id="h-normal">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h2>
+      <h3 id="h-info">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h3>
+      <h4 id="h-warning">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h4>
+      <h5 id="h-primary">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h5>
+      <h5 id="h-secondary">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h5>
+      <h5 id="h-thirdary">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </h5>
+      <script>
+        debugInfo.headTime = endTimer("pageload-header");
+        console.groupEnd("Header Section");
+      </script>
+    </header>
+    <nav>
+      <script>
+        console.group("NAV Section");
+        startTimer("pageload-nav");
+      </script>
+      <h2>This is Nav area</h2>
+      <button id="btn-default">Default</button>
+      <button id="btn-normal">Normal</button>
+      <button id="btn-info">Info</button>
+      <button id="btn-warning">Warning</button>
+      <button id="btn-primary">Primary</button>
+      <button id="btn-secondary">Secondary</button>
+      <button id="btn-thirdary">Thridary</button>
+
+      <script>
+        debugInfo.headTime = endTimer("pageload-nav");
+        console.groupEnd("NAV Section");
+      </script>
+    </nav>
+
+    <aside>
+      <script>
+        console.group("ASIDE Section");
+        startTimer("pageload-aside");
+      </script>
+
+      <H2>This is "aside " area</H2>
+      <div>
+        <input type="text" id="input-default" />
+      </div>
+      <div>
+        <input type="text" id="input-normal" />
+      </div>
+      <div>
+        <input type="text" id="input-info" />
+      </div>
+      <div>
+        <input type="text" id="input-warning" />
+      </div>
+      <div>
+        <input type="text" id="input-primary" />
+      </div>
+      <div>
+        <input type="text" id="input-secondary" />
+      </div>
+      <div>
+        <input type="text" id="input-thirdary" />
+      </div>
+      <div>
+        <input type="password" id="input-paawordBox" />
+      </div>
+      <div>
+        <input type="email" id="input-emailBox" />
+      </div>
+
+      <script>
+        debugInfo.headTime = endTimer("pageload-aside");
+        console.groupEnd("ASIDE Section");
+      </script>
+    </aside>
+
+    <section>
+      <script>
+        console.group("SECTION Section");
+        startTimer("pageload-section");
+      </script>
+
+      <h2>This is "Section" area</h2>
+      <div>
+        <p id="p-default">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-normal">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-info">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-warning">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-primary">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-secondary">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+      <div>
+        <p id="p-thirdary">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+          itaque fugiat! Modi, eaque. Blanditiis soluta placeat obcaecati
+          repudiandae ipsam perferendis.
+        </p>
+      </div>
+
+      <script>
+        debugInfo.headTime = endTimer("pageload-section");
+        console.groupEnd("SECTION Section");
+      </script>
+    </section>
+    <article>
+      <script>
+        console.group("ARTICLE Section");
+        startTimer("pageload-article");
+      </script>
+      <h2>This is "Article" area</h2>
+
+      <ul>
+        <li id="list-default">Default</li>
+        <li id="list-normal">Normal</li>
+        <li id="list-info">Info</li>
+        <li id="list-warning">Warning</li>
+        <li id="list-primary">Primary</li>
+        <li id="list-secondary">Secondary</li>
+        <li id="list-thirdary">Thirdary</li>
+      </ul>
+      <script>
+        debugInfo.headTime = endTimer("pageload-article");
+        console.groupEnd("ARTICLE Section");
+      </script>
+    </article>
+    <footer>
+      <script>
+        console.group("FOOTER SECTION");
+        startTimer("pageload-footer");
+      </script>
+
+      <h2>This is "Footer" area</h2>
+      <p id="p-test">Test</p>
+
+      <script>
+        debugInfo.footerTime = endTimer("pageload-footer");
+        console.groupEnd("FOOTER Section");
+      </script>
+    </footer>
+
+    <script>
+      debugInfo.bodyTime = endTimer("pageload-body");
+      console.groupEnd("BODY Section");
+    </script>
+    ​
+  </body>
+
+  <script>
+    debugInfo.htmlTime = endTimer("pageload-html");
+    console.groupEnd("HTML Section");
+  </script>
+</html>

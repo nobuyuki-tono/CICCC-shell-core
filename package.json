@@ -1,0 +1,37 @@
+{
+  "name": "synapse-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "node": "node_modules/.bin/comedy-node",
+    "master": "node index.js",
+    "dev": "node index.js",
+    "test": "node index.js --testAll",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@873a8522-c495-433a-9f18-34de946733f6.pub.cloud.scaleway.com:synapse/shell/shell-core.git"
+  },
+  "keywords": [
+    "synapse",
+    "core"
+  ],
+  "author": "Ivan Malone",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "axel": "0.0.3",
+    "bluebird": "^3.5.3",
+    "brain.js": "^1.6.1",
+    "cassandra-driver": "^4.0.0",
+    "chalk": "^2.4.2",
+    "comedy": "^2.0.0",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "ora": "^3.2.0",
+    "synaptic": "^1.1.4",
+    "username": "^4.1.0"
+  }
+}
